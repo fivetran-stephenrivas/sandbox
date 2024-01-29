@@ -10,12 +10,12 @@ api_secret = os.environ['FIVETRAN_API_SECRET']
 # on the Overview page for your destination
 group_id = ''
 
-# Use this endpoint to setup webhooks for your entire Fivetran account
-# fivetran_account_webhook_url = 'https://api.fivetran.com/v1/webhooks/account'
-fivetran_group_webhook_url = f'https://api.fivetran.com/v1/webhooks/group/{group_id}'
 webhook_receiver_url = ''
 
 # REST API Request Constants
+# Use this endpoint to setup webhooks for your entire Fivetran account
+# fivetran_account_webhook_url = 'https://api.fivetran.com/v1/webhooks/account'
+fivetran_group_webhook_url = f'https://api.fivetran.com/v1/webhooks/group/{group_id}'
 request_auth = requests.auth.HTTPBasicAuth(api_key, api_secret)
 request_body = {
     "url": webhook_receiver_url,
